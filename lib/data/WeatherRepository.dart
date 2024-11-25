@@ -14,10 +14,10 @@ class WeatherRepositoryImpl implements WeatherRepository {
   Future<Weather> getWeather() async {
     final data = await remoteDataSource.fetchWeatherData();
     return Weather(
-      clearance: data['clearance'],
-      temperature: data['temperature'],
-      humidity: data['humidity'],
-      pressure: data['pressure'],
+      clearance: data.weatherCode.toString(),
+      temperature: data.temperature2m.toString(),
+      humidity: data.relativeHumidity2m.toString(),
+      pressure: data.surfacePressure.toString(),
     );
   }
 }

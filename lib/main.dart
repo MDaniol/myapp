@@ -14,9 +14,8 @@ import 'package:http/http.dart' as http;
 
 void main() {
   final client = http.Client();
-  // final dataSource = WeatherRemoteDataSource(client: client);
-  // final repository = WeatherRepositoryImpl(remoteDataSource: dataSource);
-  final repository = MockWeatherRepository();
+  final dataSource = WeatherRemoteDataSource(client: client);
+  final repository = WeatherRepositoryImpl(remoteDataSource: dataSource);
   final useCase = GetWeatherUseCase(repository);
 
   runApp(

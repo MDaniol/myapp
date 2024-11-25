@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:myapp/data/Recommendations.dart';
 import 'package:myapp/data/Weather.dart';
 
+
+
+
 class HomeScreenContent extends StatelessWidget {
   final EdgeInsets innerPadding;
   final Function(String) onNavigate;
@@ -243,4 +246,3 @@ class HomeScreenState {
     ),
   );
 }
-
